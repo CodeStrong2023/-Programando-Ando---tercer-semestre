@@ -27,11 +27,6 @@
     <td><a href="https://github.com/ezelorenz" target="_blank">GitHub de Ezequiel</a></td>
   </tr>
   <tr>
-    <td>Nicolas Sini</td>
-    <td>10.515</td>
-    <td><a href="https://github.com/nicolassini" target="_blank">GitHub de Nicolas</a></td>
-  </tr>
-  <tr>
     <td>Mauro Mesas</td>
     <td>10.442</td>
     <td><a href="https://github.com/mauromesas" target="_blank">GitHub de Mauro</a></td>
