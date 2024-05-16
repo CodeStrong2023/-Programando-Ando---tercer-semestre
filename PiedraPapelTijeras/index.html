@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Piedra, Papel o Tijeras</title>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Piedras 🥌, Papel 🧻 o Tijeras ✂!</h1>
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Importo los material icons de google -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+     <!-- Importo la fuente de JetBrains -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+     <!-- Uso los material icons y le pongo 44px a los iconos -->
+    <h1>
+      <i class="material-icons" style="font-size: 44px">sports_handball</i>
+      Piedra,
+      <i class="material-icons" style="font-size: 44px">content_paste</i> Papel
+      y <i class="material-icons" style="font-size: 44px">content_cut</i> Tijera
+    </h1>
+    <!-- Boton para iniciar el juego -->
+    <button onclick="iniciarJuego()">Iniciar Juego</button>
+  </body>
 </html>
