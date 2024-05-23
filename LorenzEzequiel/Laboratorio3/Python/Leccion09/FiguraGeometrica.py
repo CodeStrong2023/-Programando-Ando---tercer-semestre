@@ -1,5 +1,5 @@
 from abc import ABC, abstractclassmethod
-#ABC significa: Abstract Base Class, convierte una clase en abstracta
+#ABC significa: Abstract Base Class, convierte una clase en abstracta.
 
 class FiguraGeometrica(ABC):
     def __init__(self, ancho, alto):
@@ -45,5 +45,4 @@ def __str__(self):
 
 def _validar_valores(self, valor): #Metodo encapsulado
     return True if 0 < valor < 10 else False
-    
     
