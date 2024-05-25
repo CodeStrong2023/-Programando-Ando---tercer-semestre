@@ -21,6 +21,22 @@ class Persona{ //clase padre
     set apellido(apellido){
         this._apellido = apellido
     }
+
+    nombreCompleto(){
+        return this._nombre+' '+this._apellido;
+    }
+
+    //sobreescritura 
+    nombreCompleto(){
+        return super.nombreCompleto()+', '+this._departamento;
+    }
+    //sobreescribiendo el metodo de la clase padre(object)
+    toString(){ //regresa un String
+        //se aplica el polimorfismo que significa = multiples formas en tiempo de ejecucion
+        //el metodo que se ejecuta depende si es una referncia de tipo padre o hija
+        return this.nombreCompleto();
+    }
+
 }
 
 class Empleado extends Persona{ //clase hija
@@ -49,8 +65,11 @@ console.log(persona2.nombre)
 
 let empleado1 = new Empleado('maria', 'gimenez', 'sistemas')
 console.log(empleado1)
-console.log(empleado1.nombre)
+console.log(empleado1.nombreCompleto());
 
+//Object.prototype.toString   Esta es la manera de acceder a atriutos y metodos de mandera dinamica
+console.log(empleado1.toString());
+console.log(persona1.toString());
 
 
 
