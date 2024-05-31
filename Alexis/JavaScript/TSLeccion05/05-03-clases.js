@@ -1,9 +1,24 @@
 // let persona3 = new Persona('carla', 'ponce'); esto no se debe hacer: Persona is not defined
 
 class Persona{ //clase padre
+
+    static contadorPersonas = 0 //atributo estatico
+    //email = 'valor default email' //atributo no estatico
+
+    static get MAX_OBJ(){ //este metodo simula una constante
+        return 5
+    }
+
     constructor(nombre, apellido){
         this._nombre = nombre;
         this._apellido = apellido;
+        if(Persona.contadorPersonas < MAX_OBJ){
+            this.idPersona = ++Persona.contadorPersonas
+        }
+        else{
+            console.log('se ha superado el maximo de objetos permitidos')
+        }
+        //console.log('se incrementa el contador: '+ Persona.contadorObjetosPersona)
     }
 
     get nombre(){
@@ -23,7 +38,7 @@ class Persona{ //clase padre
     }
 
     nombreCompleto(){
-        return this._nombre+' '+this._apellido;
+        return this.idPersona+' '+this._nombre+' '+this._apellido;
     }
 
     //sobreescritura 
@@ -37,6 +52,13 @@ class Persona{ //clase padre
         return this.nombreCompleto();
     }
 
+    static saludar(){
+        console.log('saludos desde este metodo static')
+    }
+
+    static saludar2(persona){
+        console.log(persona.nombre+' '+persona.apellido)
+    }
 }
 
 class Empleado extends Persona{ //clase hija
@@ -71,8 +93,35 @@ console.log(empleado1.nombreCompleto());
 console.log(empleado1.toString());
 console.log(persona1.toString());
 
+// persona1.saludar() no se utiliza desde el objeto
+Persona.saludar()
+Persona.saludar2(persona1)
 
+Empleado.saludar()
+Empleado.saludar2(empleado1)
 
+//console.log(persona1.contadorObjetosPersona)
+console.log(Persona.contadorObjetosPersona)
+console.log(Empleado.contadorObjetosPersona)
 
+console.log(persona1.email)
+console.log(empleado1.email)
+//console.log(Persona.email) no puede acceder desde la clase
+console.log(persona1.toString())
+console.log(persona2.toString())
+console.log(empleado1.toString())
+console.log(Persona.contadorPersonas)
+let persona3 = new Persona('carla', 'pertosi')
+console.log(persona3.toString())
+console.log(Persona.contadorPersonas)
+
+console.log(Persona.MAX_OBJ)
+//Persona.MAX_OBJ = 10 no se puede modificar, ni alterar
+console.log(Persona.MAX_OBJ)
+
+let persona4 = new Persona('franco', 'diaz')
+console.log(persona4.toString())
+let persona5 = new Persona('liliana', 'paz')
+console.log(persona5.toString())
 
 
