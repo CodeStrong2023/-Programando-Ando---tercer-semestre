@@ -31,14 +31,4 @@
     <td>10.442</td>
     <td><a href="https://github.com/mauromesas" target="_blank">GitHub de Mauro</a></td>
   </tr>
-  <tr>
-    <td>Gaston Cuello</td>
-    <td>10.358</td>
-    <td><a href="https://github.com/GastonCuello23" target="_blank">GitHub de Gaston</a></td>
-  </tr>
-  <tr>
-    <td>Tahiel Inostroza</td>
-    <td>10.412</td>
-    <td><a href="https://github.com/tahiel-14" target="_blank">GitHub de Tahiel</a></td>
-  </tr>
 </table>
