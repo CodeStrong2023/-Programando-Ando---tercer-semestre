@@ -1,0 +1,9 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": ["Hola", "Buenos dias", "Buenas tardes"],
+      "responses": ["¡Hola! ¿Còmo puedo ayudarte hoy?", "¡Hola!, soy Prograchat, el ChatBot del Ecommerce de programandoAndo"]
+    }
+  ]
+}
