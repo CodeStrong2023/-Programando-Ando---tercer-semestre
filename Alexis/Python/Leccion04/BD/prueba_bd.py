@@ -13,7 +13,7 @@ try:
             sentencia = 'SELECT * FROM persona WHERE id_persona = %s'  # Placeholder
             id_persona = input('digite un numero para el id_persona: ')
             cursor.execute(sentencia, (id_persona,))  # de esta manera ejecutamos la sentencia
-            registros = cursos.fetchone()  # recuperamos todos los registros que seran una lista
+            registros = cursor.fetchone()  # recuperamos todos los registros que seran una lista
             print(registros)
 except Exception as e:
     print(f'ocurrio un error: {e}')
