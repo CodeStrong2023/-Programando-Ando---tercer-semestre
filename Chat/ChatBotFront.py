@@ -1,4 +1,5 @@
 import streamlit as st
+from ChatBotBack import predict_class, get_response, intents
 
 st.title("ProgramandoAndo")
 
@@ -22,6 +23,9 @@ if prompt := st.chat_input("¿como puedo ayudarte?"):
     with st.chat_message("user"):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
+
+    insts = predict_class(prompt)
+    res = get_response(insts, intents)
 
     with st.chat_message("assistant"):
         st.markdown(prompt)
