@@ -1,4 +1,0 @@
-1;Juancho;Panza;24/08/1315
-2;Maria Teresa;De Calcuta;26/031940
-3;Clark;Kent;01/05/1961
-4;Barack;Obama;05/11/1976
