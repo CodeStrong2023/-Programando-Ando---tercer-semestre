@@ -21,7 +21,7 @@ ignore_words = ['?', '!']
 
 # Recorre cada respuesta con sus patrones en el JSON
 for intent in intents['intents']:
-    for pattern in intents['patterns']:
+    for pattern in intent['patterns']:
         w = nltk.word_tokenize(pattern) #se tokeniza la palabra y se la agrega  a la lista de palabras
         words.extend(w)
         documents.append((w, intent['tag']))
@@ -42,16 +42,16 @@ output_empty = [0] * len(classes)
 for doc in documents:
     bag=[]
     pattern_words = doc[0]
-    pattern_words = [lematizer.lemmatize(word.lowen()) for word in pattern_words]
+    pattern_words = [lematizer.lemmatize(word.lower()) for word in pattern_words]
     for word in words:
-        #Ceacion de una bolsa de palabras binarias para cada patron
+        #Creacion de una bolsa de palabras binarias para cada patron
         bag.append(1) if word in pattern_words else bag.append(0)
     output_row = list(output_empty)
     #Crea un vector de salida con un 1 en la posicion correspondiente de la etiqueta de la intencion
     output_row[classes.index(doc[1])] = 1
     training.append([bag, output_row])
 
-#Mezcla aleatoreamente el conunto de entrenamiento
+#Mezcla aleatoreamente el conjunto de entrenamiento
 random.shuffle(training)
 
 #divide el conjunto de entrenamiento en caracterisitcas (train_x) y etiquetas (train_y)
@@ -77,7 +77,7 @@ lr_schedule = ExponentialDecay(
 )
 
 sgd =SGD(learning_rate=lr_schedule,momentum=0.9, nesterov=True)
-model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accurancy'])
+model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
 #Entrena el modelo con el cnjunto de entrenamiento
 hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
