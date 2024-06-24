@@ -22,7 +22,7 @@
     },
     {
       "tag": "información_pago",
-      "patterns": ["¿Cuáles son las opciones de pago?", "¿Aceptan tarjetas de crédito?", "¿Puedo pagar con PayPal?"],
+      "patterns": ["¿Cuáles son las opciones de pago?", "¿Aceptan tarjetas de crédito?", "¿Puedo pagar con PayPal?", "¿Cuales son los medios de pago?","¿Puedo pagar con MercadoPago?"],
       "responses": ["Aceptamos tarjetas de crédito, débito y PayPal. También puedes pagar mediante transferencia bancaria."]
     },
     {

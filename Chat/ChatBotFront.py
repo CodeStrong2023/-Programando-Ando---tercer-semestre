@@ -1,6 +1,8 @@
 import streamlit as st
+from ChatBotBack import predict_class, get_response, intents
 
 st.title("ProgramandoAndo")
+default_response = "Lo siento, no entiendo tu pregunta."
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -13,16 +15,18 @@ for message in st.session_state.messages:
 
 if st.session_state.first_message:
     with st.chat_message("assistant"):
-        st.markdown("Hola, ¿como puedo ayudarte?")
+        st.markdown("Hola, ¿cómo puedo ayudarte?")
 
-    st.session_state.messages.append({"role": "assistant", "content": "Hola, ¿como puedo ayudarte?"})
+    st.session_state.messages.append({"role": "assistant", "content": "Hola, ¿cómo puedo ayudarte?"})
     st.session_state.first_message = False
 
-if prompt := st.chat_input("¿como puedo ayudarte?"):
+if prompt := st.chat_input("¿Cómo puedo ayudarte?"):
     with st.chat_message("user"):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
 
+    insts, max_prob = predict_class(prompt)
+    res = get_response(insts, intents)
+    st.session_state.messages.append({"role": "assistant", "content": res})
     with st.chat_message("assistant"):
-        st.markdown(prompt)
-    st.session_state.messages.append({"role": "assistant", "content": prompt})
+        st.markdown(res)
