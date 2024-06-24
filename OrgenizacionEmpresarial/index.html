@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Organización empresarial</title>
+</head>
+<body>
+    <header>
+        <h1>Panadería "ProgramandoAndo"</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="inicio">
+            <h2>Bienvenidos a nuestra panadería</h2>
+            <p>Ofrecemos una amplia variedad de productos horneados frescos todos los días.</p>
+            <img src="panaderia.jpg" alt="Panadería El Panecillo">
+        </section>
+        
+        <article id="historia">
+            <h2>Nuestra Historia</h2>
+            <p>Desde nuestros humildes comienzos, hemos crecido hasta convertirnos en una de las panaderías más queridas de la ciudad...</p>
+        </article>
+
+        <section id="multimedia">            
+            <figure>
+                <figcaption>Video de nuestro proceso de horneado:</figcaption>
+                <video autoplay controls loop width="500" height="200">
+                    <source src="video/proceso_horneado.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </figure>
+    
+            <figure>
+                <figcaption>Escucha nuestro anuncio:</figcaption>
+                <audio controls>
+                    <source src="audio/anuncio.mp4" type="audio/mp4">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </figure>
+    
+            <figure>
+                <figcaption>Visita nuestro blog:</figcaption>
+                <iframe src="https://www.ejemplo.com" width="500" height="300"></iframe>
+            </figure>
+        </section>
+
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <p>Aquí hay una lista de algunos de nuestros productos más populares:</p>
+            <ul>
+                <li>Pan Francés</li>
+                <li>Baguettes</li>
+                <li>Empanadas</li>
+                <li>Palmeritas</li>
+                <li>Muffins</li>
+            </ul>
+        </section>
+        
+        <section id="ubicacion">
+            <h2>Ubicación</h2>
+            <p>Nos encontramos en:</p>
+            <address>
+                Avenida Principal, 123<br>
+                Ciudad Panadera<br>
+                Código Postal: 12345
+            </address>
+        </section>
+        
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <table>
+                <tr>
+                    <th>Departamento</th>
+                    <th>Teléfono</th>
+                    <th>Correo Electrónico</th>
+                </tr>
+                <tr>
+                    <td>Ventas</td>
+                    <td>123-456-7890</td>
+                    <td>ventas@panecillo.com</td>
+                </tr>
+                <tr>
+                    <td>Soporte</td>
+                    <td>098-765-4321</td>
+                    <td>soporte@panecillo.com</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="forml">
+            <h2>Formulario de Contacto</h2>
+            <form action="/submit" method="post">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br>
+                
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" required><br>
+                
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" required></textarea><br>
+                
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+
+        <aside>
+            <h2>Promociones</h2>
+            <p>No te pierdas nuestras promociones de la semana:</p>
+            <ul>
+                <li>2x1 en Pan Francés</li>
+                <li>Descuento del 20% en Empanadas</li>
+                <li>Compra una docena de Muffins y lleva dos gratis</li>
+            </ul>
+
+            <h2>Enlaces Relacionados</h2>
+            <ul>
+                <li><a href="#historia">Nuestra Historia</a></li>
+                <li><a href="#equipo">Conoce a nuestro equipo</a></li>
+                <li><a href="#blog">Blog de recetas</a></li>
+            </ul>
+        </aside>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Panadería "ProgramandoAndo". Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+
