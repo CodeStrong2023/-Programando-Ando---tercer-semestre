@@ -1,0 +1,66 @@
+02:39:28 PM:DEBUG [logger_base.py:13] Mensaje a nivel debug
+02:39:28 PM:INFO [logger_base.py:14] Mensaje a nivel info
+02:39:28 PM:WARNING [logger_base.py:15] Mensaje a nivel warning
+02:39:28 PM:ERROR [logger_base.py:16] Mensaje a nivel error
+02:39:28 PM:CRITICAL [logger_base.py:17] Mensaje a nivel critical
+02:41:47 PM--:DEBUG [logger_base.py:13] Mensaje a nivel debug
+02:41:47 PM--:INFO [logger_base.py:14] Mensaje a nivel info
+02:41:47 PM--:WARNING [logger_base.py:15] Mensaje a nivel warning
+02:41:47 PM--:ERROR [logger_base.py:16] Mensaje a nivel error
+02:41:47 PM--:CRITICAL [logger_base.py:17] Mensaje a nivel critical
+02:42:05 PM:--DEBUG [logger_base.py:13] Mensaje a nivel debug
+02:42:05 PM:--INFO [logger_base.py:14] Mensaje a nivel info
+02:42:05 PM:--WARNING [logger_base.py:15] Mensaje a nivel warning
+02:42:05 PM:--ERROR [logger_base.py:16] Mensaje a nivel error
+02:42:05 PM:--CRITICAL [logger_base.py:17] Mensaje a nivel critical
+02:43:25 PM:--DEBUG	 [logger_base.py:13] Mensaje a nivel debug
+02:43:25 PM:--INFO	 [logger_base.py:14] Mensaje a nivel info
+02:43:25 PM:--WARNING	 [logger_base.py:15] Mensaje a nivel warning
+02:43:25 PM:--ERROR	 [logger_base.py:16] Mensaje a nivel error
+02:43:25 PM:--CRITICAL	 [logger_base.py:17] Mensaje a nivel critical
+02:43:39 PM:--DEBUG [logger_base.py:13] Mensaje a nivel debug
+02:43:39 PM:--INFO [logger_base.py:14] Mensaje a nivel info
+02:43:39 PM:--WARNING [logger_base.py:15] Mensaje a nivel warning
+02:43:39 PM:--ERROR [logger_base.py:16] Mensaje a nivel error
+02:43:39 PM:--CRITICAL [logger_base.py:17] Mensaje a nivel critical
+02:53:42 PM:--DEBUG [Persona.py:55] 
+            Id Persona: 1,
+            Nombre: Juan,
+            Apellido: Perez,
+            Email: jperez@mail.com
+        
+02:54:53 PM:--DEBUG [Persona.py:55] 
+            Id Persona: 1,
+            Nombre: Juan,
+            Apellido: Perez,
+            Email: jperez@email.com
+        
+02:54:53 PM:--DEBUG [Persona.py:57] 
+            Id Persona: None,
+            Nombre: Jose,
+            Apellido: Martinez,
+            Email: jmartinez@email.com
+        
+02:57:48 PM:--DEBUG [Persona.py:55] 
+            Id Persona: 1,
+            Nombre: Juan,
+            Apellido: Perez,
+            Email: jperez@email.com
+        
+02:57:48 PM:--DEBUG [Persona.py:57] 
+            Id Persona: None,
+            Nombre: Jose,
+            Apellido: Martinez,
+            Email: jmartinez@email.com
+        
+02:57:48 PM:--DEBUG [Persona.py:59] 
+            Id Persona: 1,
+            Nombre: None,
+            Apellido: None,
+            Email: None
+        
+03:14:35 PM:--DEBUG [conexion.py:24] Conexión Exitosa! <connection object at 0x000002C294EB1250; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+03:15:35 PM:--ERROR [conexion.py:27] Ocurrió un error! connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgre"
+
+03:15:52 PM:--DEBUG [conexion.py:24] Conexión Exitosa! <connection object at 0x000001BC3AA51250; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+03:15:52 PM:--DEBUG [conexion.py:37] Se abrió correctamente el cursor: <cursor object at 0x000001BC3A6EA260; closed: 0>

@@ -1,0 +1,69 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>0</x><y>24</y><w>888</w><h>616</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>24</x><y>0</y><w>80</w><h>24</h></coordinates><panel_attributes>mundo_pc</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>64</x><y>48</y><w>232</w><h>152</h></coordinates><panel_attributes>&lt;&lt;Computadora&gt;&gt;
+--
++contador_computadoras: int &lt;&lt;static&gt;&gt;
+-idComputadora: int
+-nombre: String
+-monitor: Monitor
+-teclado: Teclado
+-raton: Raton
+--
++__str__()
++(agregar los metodos get/set de cada atributo)
+--
+Responsabilidades
+--Crear objetos de tipo Computadora
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>296</y><w>232</w><h>152</h></coordinates><panel_attributes>&lt;&lt;Monitor&gt;&gt;
+--
++contadorMonitores: int &lt;&lt;static&gt;&gt;
+-idMonitor: int
+-marca: String
+-tamaño: String
+--
++__str__()
++(agregar los metodos get/set de cada atributo)
+--
+Responsabilidades
+--Crear objetos de tipo Monitor
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>456</x><y>56</y><w>296</w><h>144</h></coordinates><panel_attributes>&lt;&lt;Orden&gt;&gt;
+--
++contadorOrdenes: int &lt;&lt;static&gt;&gt;
+-idOrden: int
+-computadoras: List &lt;&lt;computadora&gt;&gt;
+--
++agregarComputadora(computadora)
++__str__()
++(agregar los metodos get/set de cada atributo)
+--
+Responsabilidades
+--Almacenar en una lista los objetos de tipo Computadora
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>456</x><y>240</y><w>296</w><h>152</h></coordinates><panel_attributes>&lt;&lt;DispositivoEntrada&gt;&gt;
+--
+#tipoEntrada: String
+#marca: String
+--
++__str__()
++(agregar los metodos get/set de cada atributo)
+--
+Responsabilidades
+--Crear objetos de tipo DispositivosEntrada
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>344</x><y>472</y><w>232</w><h>104</h></coordinates><panel_attributes>&lt;&lt;Raton&gt;&gt;
+--
++contadorRatones: int &lt;&lt;Static&gt;&gt;
+-idRatones: int
+--
++__str__()
+--
+Responsabilidades
+--Crear objetos de tipo Raton
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>624</x><y>472</y><w>232</w><h>104</h></coordinates><panel_attributes>&lt;&lt;Teclado&gt;&gt;
+--
++contadorTeclados: int &lt;&lt;Static&gt;&gt;
+-idTeclados: int
+--
++__str__()
+--
+Responsabilidades
+--Crear objetos de tipo Teclados
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>288</x><y>104</y><w>184</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;.
+&lt;&lt;agregar&gt;&gt;</panel_attributes><additional_attributes>210;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>192</y><w>24</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>416</y><w>160</w><h>24</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;180;10</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>384</y><w>24</w><h>56</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>416</y><w>160</w><h>24</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;180;10</additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>416</y><w>24</w><h>72</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>736</x><y>416</y><w>24</w><h>72</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>736</x><y>568</y><w>24</w><h>56</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>568</y><w>24</w><h>56</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>600</y><w>160</w><h>24</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;180;10</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>600</y><w>160</w><h>24</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;180;10</additional_attributes></element><element><id>Relation</id><coordinates><x>328</x><y>600</y><w>160</w><h>24</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;180;10</additional_attributes></element><element><id>Relation</id><coordinates><x>304</x><y>600</y><w>48</w><h>24</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;40;10</additional_attributes></element><element><id>Relation</id><coordinates><x>304</x><y>248</y><w>24</w><h>376</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;10;450</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>240</y><w>168</w><h>32</h></coordinates><panel_attributes>lt=-
+&lt;&lt;agregar&gt;&gt;</panel_attributes><additional_attributes>190;20;10;20</additional_attributes></element></diagram>

@@ -22,3 +22,6 @@ print(f'Calculo del area del rectangulo {rectangulo1.calcular_area()}')
 print(rectangulo1)
 
 #figura1 = FiguraGeometrica() No se puede instanciar es abstracta
+
+
+print(Cuadrado.mro())
