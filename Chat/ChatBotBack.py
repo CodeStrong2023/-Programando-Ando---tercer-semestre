@@ -5,6 +5,8 @@ import numpy as np
 import nltk
 from nltk.stem import WordNetLemmatizer
 from keras._tf_keras.keras.models import load_model
+import re
+import unicodedata
 
 lematizer = WordNetLemmatizer()
 intents = json.loads(open('possible_answers.json', 'r', encoding='utf-8').read())
@@ -14,6 +16,8 @@ classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('chatbot_model.h5')
 
 def clean_up_sentence(sentence):
+    sentence = remove_punctuation(sentence)
+    sentence = remove_accents(sentence)
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lematizer.lemmatize(word.lower()) for word in sentence_words]
     return sentence_words
@@ -46,3 +50,17 @@ def get_response(intents_list, intents_json):
             result = random.choice(i['responses'])
             break
     return result
+
+def is_valid_input(user_input, intents_json):
+    for intent in intents_json['intents']:
+        for pattern in intent['patterns']:
+            if user_input.lower() in pattern.lower():
+                return True
+    return False
+
+def remove_punctuation(input_string):
+    return re.sub(r'[^\w\s]', '', input_string)
+
+def remove_accents(input_str):
+    nfkd_form = unicodedata.normalize('NFKD', input_str)
+    return "".join([c for c in nfkd_form if not unicodedata.combining(c)])

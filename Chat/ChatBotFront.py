@@ -1,5 +1,5 @@
 import streamlit as st
-from ChatBotBack import predict_class, get_response, intents
+from ChatBotBack import predict_class, get_response, intents, is_valid_input
 
 st.title("ProgramandoAndo")
 
@@ -14,19 +14,22 @@ for message in st.session_state.messages:
 
 if st.session_state.first_message:
     with st.chat_message("assistant"):
-        st.markdown("Hola, ¿como puedo ayudarte?")
+        st.markdown("Hola, ¿cómo puedo ayudarte?")
 
-    st.session_state.messages.append({"role": "assistant", "content": "Hola, ¿como puedo ayudarte?"})
+    st.session_state.messages.append({"role": "assistant", "content": "Hola, ¿cómo puedo ayudarte?"})
     st.session_state.first_message = False
 
-if prompt := st.chat_input("¿como puedo ayudarte?"):
+if prompt := st.chat_input("¿Cómo puedo ayudarte?"):
     with st.chat_message("user"):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
 
-    insts = predict_class(prompt)
-    res = get_response(insts, intents)
+    if is_valid_input(prompt, intents):
+        insts = predict_class(prompt)
+        res = get_response(insts, intents)
+    else:
+        res = "Lo siento, no entiendo tu pregunta. Por favor, intenta reformularla."
 
     with st.chat_message("assistant"):
         st.markdown(res)
-    st.session_state.messages.append({"role": "assistant", "content": prompt})
+    st.session_state.messages.append({"role": "assistant", "content": res})

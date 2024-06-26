@@ -2,53 +2,53 @@
   "intents": [
     {
       "tag": "saludo",
-      "patterns": ["Hola", "Buenos dias", "Buenas tardes"],
-      "responses": ["¡Hola! ¿Cómo puedo ayudarte hoy?", "¡Hola!, soy Prograchat, el ChatBot del Ecommerce de programandoAndo"]
+      "patterns": ["Hola", "Hola!", "Buenos dias", "Buenas tardes", "Hi", "Hello", "Ey", "Que tal", "Buen dia", "Buenas", "Hola, ¿qué tal?", "Hola, ¿cómo estás?", "Saludos", "Qué onda", "Hola, hola"],
+      "responses": ["¡Hola! ¿Cómo puedo ayudarte hoy?", "¡Hola!, soy Prograchat, el ChatBot del Ecommerce de programandoAndo", "¡Hola! ¿Qué necesitas?", "¡Hola! ¿En qué puedo asistirte?", "¡Hola! ¿Cómo estás?"]
     },
     {
       "tag": "despedida",
-      "patterns": ["Adiós", "Hasta luego", "Nos vemos"],
-      "responses": ["¡Adiós! Que tengas un buen día.", "¡Hasta luego! Vuelve pronto."]
+      "patterns": ["Adiós", "Hasta luego", "Nos vemos", "Chau", "Chao", "Bye", "Adios!", "Hasta pronto", "Me voy", "Hasta la próxima", "Cuídate", "Nos vemos luego", "Chau chau", "Hasta otra", "Ciao"],
+      "responses": ["¡Adiós! Que tengas un buen día.", "¡Hasta luego! Vuelve pronto.", "¡Nos vemos! Cuídate.", "¡Chau! Que estés bien.", "¡Adiós! Hasta la próxima."]
     },
     {
       "tag": "agradecimiento",
-      "patterns": ["Gracias", "Muchas gracias", "Te lo agradezco"],
-      "responses": ["¡De nada! ¿Hay algo más en lo que te pueda ayudar?", "¡Con gusto! ¿Necesitas algo más?"]
+      "patterns": ["Gracias", "Muchas gracias", "Te lo agradezco", "Mil gracias", "Thanks", "Gracias!", "Muy amable", "Gracias por tu ayuda", "Agradecido", "Te agradezco", "Gracias, muy útil", "Gracias, chatbot"],
+      "responses": ["¡De nada! ¿Hay algo más en lo que te pueda ayudar?", "¡Con gusto! ¿Necesitas algo más?", "¡De nada! Estoy aquí para ayudarte.", "¡De nada! ¿Alguna otra consulta?", "¡Con mucho gusto! ¿En qué más puedo asistirte?"]
     },
     {
       "tag": "información_envíos",
-      "patterns": ["¿Cómo hago un pedido?", "¿Cuál es el costo de envío?", "¿Cuánto tarda el envío?"],
-      "responses": ["Puedes hacer un pedido a través de nuestro sitio web. El costo de envío depende de tu ubicación y el tiempo de entrega es de 3 a 5 días hábiles."]
+      "patterns": ["¿Cómo hago un pedido?", "¿Cuál es el costo de envío?", "¿Cuánto tarda el envío?", "Costo envío", "Cuanto vale el envio", "Cuanto demora el envio", "Tiempo de envío", "Precio del envío", "¿Cómo pedir?", "Costos de envío", "Tiempos de entrega", "Plazo de envío", "Precio envío", "¿Cuánto cuesta enviar?", "Métodos de envío"],
+      "responses": ["Puedes hacer un pedido a través de nuestro sitio web. El costo de envío depende de tu ubicación y el tiempo de entrega es de 3 a 5 días hábiles.", "El costo y tiempo de envío varía según tu ubicación. Visita nuestra web para más detalles.", "Puedes hacer un pedido online y el costo de envío depende de dónde te encuentres."]
     },
     {
       "tag": "información_pago",
-      "patterns": ["¿Cuáles son las opciones de pago?", "¿Aceptan tarjetas de crédito?", "¿Puedo pagar con PayPal?"],
-      "responses": ["Aceptamos tarjetas de crédito, débito y PayPal. También puedes pagar mediante transferencia bancaria."]
+      "patterns": ["¿Cuáles son las opciones de pago?", "¿Aceptan tarjetas de crédito?", "¿Puedo pagar con PayPal?", "Métodos de pago", "Formas de pago", "Pagar con tarjeta", "Pagar con PayPal", "Pagar con débito", "¿Qué formas de pago aceptan?", "¿Puedo pagar con transferencia?", "Opciones de pago", "Pagos aceptados", "Formas de pago disponibles", "¿Puedo pagar en efectivo?", "¿Puedo pagar en cuotas?"],
+      "responses": ["Aceptamos tarjetas de crédito, débito y PayPal. También puedes pagar mediante transferencia bancaria.", "Puedes pagar con tarjeta de crédito, débito, PayPal o transferencia bancaria.", "Ofrecemos varias opciones de pago, incluyendo tarjetas y PayPal."]
     },
     {
       "tag": "devoluciones",
-      "patterns": ["¿Cómo puedo devolver un producto?", "¿Cuál es la política de devoluciones?", "¿Puedo hacer un cambio?"],
-      "responses": ["Puedes devolver un producto dentro de los 30 días posteriores a la compra. Para más detalles, visita nuestra página de política de devoluciones."]
+      "patterns": ["¿Cómo puedo devolver un producto?", "¿Cuál es la política de devoluciones?", "¿Puedo hacer un cambio?", "Devolver producto", "Hacer un cambio", "Devolución", "Política de devoluciones", "Cambiar producto", "Quiero devolver algo", "Devolución de producto", "Proceso de devolución", "Cómo hacer una devolución", "¿Cómo devuelvo un producto?", "¿Puedo devolver esto?", "Reembolsos y devoluciones"],
+      "responses": ["Puedes devolver un producto dentro de los 30 días posteriores a la compra. Para más detalles, visita nuestra página de política de devoluciones.", "Para devolver un producto, sigue las instrucciones en nuestra política de devoluciones en el sitio web.", "Ofrecemos devoluciones dentro de los 30 días. Consulta nuestra política en línea para más información."]
     },
     {
       "tag": "soporte_técnico",
-      "patterns": ["Tengo un problema con mi pedido", "Necesito ayuda con un producto", "Mi producto no funciona"],
-      "responses": ["Lamentamos escuchar eso. Por favor, proporciona más detalles sobre el problema para que podamos ayudarte mejor."]
+      "patterns": ["Tengo un problema con mi pedido", "Necesito ayuda con un producto", "Mi producto no funciona", "Problema con pedido", "Ayuda con producto", "Producto defectuoso", "Problema técnico", "Soporte técnico", "Problemas con la compra", "Producto dañado", "Necesito soporte", "Asistencia técnica", "Error con mi pedido", "Producto roto", "Necesito ayuda técnica"],
+      "responses": ["Lamentamos escuchar eso. Por favor, proporciona más detalles sobre el problema para que podamos ayudarte mejor.", "Lo siento, dinos más sobre tu problema para asistirte.", "Lamentamos el inconveniente. Cuéntanos más sobre el problema para ayudarte."]
     },
     {
       "tag": "horarios_atención",
-      "patterns": ["¿Cuáles son sus horarios de atención?", "¿A qué hora abren?", "¿Están abiertos los fines de semana?"],
-      "responses": ["Nuestros horarios de atención son de lunes a viernes de 9 AM a 6 PM. Estamos cerrados los fines de semana."]
+      "patterns": ["¿Cuáles son sus horarios de atención?", "¿A qué hora abren?", "¿Están abiertos los fines de semana?", "Horario de atención", "Horario de apertura", "Horarios", "Días y horas de atención", "Horas de operación", "¿Cuándo están abiertos?", "Horario de trabajo", "Horarios de oficina", "¿A qué hora cierran?", "¿Qué días están abiertos?", "¿Cuándo puedo visitarlos?", "Horas hábiles"],
+      "responses": ["Nuestros horarios de atención son de lunes a viernes de 9 AM a 6 PM. Estamos cerrados los fines de semana.", "Abrimos de lunes a viernes de 9 AM a 6 PM. Cerramos los fines de semana.", "Estamos disponibles de lunes a viernes de 9 AM a 6 PM. No abrimos los fines de semana."]
     },
     {
       "tag": "productos_disponibles",
-      "patterns": ["¿Tienen [producto] en stock?", "¿Puedo comprar [producto]?", "¿Tienen disponibles [producto]?"],
-      "responses": ["Para consultar la disponibilidad de productos, por favor visita nuestra página de productos en el sitio web."]
+      "patterns": ["¿Tienen [producto] en stock?", "¿Puedo comprar [producto]?", "¿Tienen disponibles [producto]?", "Stock de [producto]", "Disponibilidad de [producto]", "Comprar [producto]", "Vender [producto]", "¿Tienen [producto]?", "¿Puedo conseguir [producto]?", "¿Hay [producto] en existencia?", "¿Disponen de [producto]?", "Ver disponibilidad de [producto]", "Consultar stock de [producto]", "Disponibilidad de artículos", "Ver si tienen [producto]"],
+      "responses": ["Para consultar la disponibilidad de productos, por favor visita nuestra página de productos en el sitio web.", "Puedes verificar la disponibilidad de nuestros productos en la sección de productos de nuestra web.", "Por favor, visita nuestra página web para verificar si el producto está en stock."]
     },
     {
       "tag": "contacto",
-      "patterns": ["¿Cómo puedo contactarlos?", "¿Cuál es su número de teléfono?", "¿Tienen correo electrónico?"],
-      "responses": ["Puedes contactarnos al número 123-456-7890 o enviar un correo a contacto@programandoando.com."]
+      "patterns": ["¿Cómo puedo contactarlos?", "¿Cuál es su número de teléfono?", "¿Tienen correo electrónico?", "Contacto", "Número de contacto", "Correo de contacto", "Teléfono de contacto", "¿Cómo los contacto?", "¿Cómo hablo con ustedes?", "¿Cómo me comunico con ustedes?", "Detalles de contacto", "Forma de contacto", "Información de contacto", "Datos de contacto", "¿Tienen número de teléfono?"],
+      "responses": ["Puedes contactarnos por todas nuestras redes o enviar un correo a contacto@programandoando.com.", "Nuestro correo electrónico es contacto@programandoando.com.", "Puedes comunicarte con nosotros a traves de cualquiera de nuestas redes o enviando un email a contacto@programandoando.com."]
     }
   ]
 }
