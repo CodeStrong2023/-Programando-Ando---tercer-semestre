@@ -9,6 +9,5 @@ public class Main {
             System.out.println("conexion exitosa: "+conexion);
         else
             System.out.println("error al conectarse");
-
     }//fin main
 }//fin clase
