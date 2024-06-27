@@ -1,0 +1,34 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>117</x><y>0</y><w>189</w><h>207</h></coordinates><panel_attributes>Persona
+--
+_idPersona: number
+_nombre: string
+_apellido: string
+_edad: number
+--
++ContadorPersonas
++getIdPersonas(): int
++getNombre(): string
++setNombre(string)
++getApellido(): string
++setApellido(string)
++getEdad(): int
++setEdad(int)
++toString()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>18</x><y>288</y><w>189</w><h>126</h></coordinates><panel_attributes>Empleado
+--
+_idEmpleado: Long
+_sueldo: int
+--
++getIdEmpleado(): int
++getSueldo(): int
++setSueldo(int)
++toString()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>225</x><y>288</y><w>189</w><h>126</h></coordinates><panel_attributes>Cliente
+--
+_idCliente: Long
+_fechaRegistro: Date
+--
++getIdCliente(): int
++getFechaRegisro(): Date
++setFechaRegistro(Date)
++toString()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>99</x><y>234</y><w>135</w><h>36</h></coordinates><panel_attributes>lt=-
+&lt;&lt;Extends&gt;&gt;</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>Relation</id><coordinates><x>99</x><y>243</y><w>27</w><h>63</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>243</y><w>27</w><h>63</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>207</x><y>198</y><w>27</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>207</x><y>234</y><w>135</w><h>36</h></coordinates><panel_attributes>lt=-
+&lt;&lt;Extends&gt;&gt;</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element></diagram>
