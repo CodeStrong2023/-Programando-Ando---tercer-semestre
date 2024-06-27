@@ -1,5 +1,5 @@
 import psycopg2
-from database.conexion import conectar_db
+from src.database.conexion import conectar_db
 
 # Método para crear la tabla al iniciar el main
 def crear_tablas():

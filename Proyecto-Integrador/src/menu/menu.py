@@ -7,16 +7,20 @@ from src.metodos.modificar_producto import modificar_producto
 
 def mostrar_menu():
     while True:
-        
         print("Menu".center(30, "="))
-        print("1-Ingresar un nuevo Producto")
-        print("2-Listar registro de Productos")
-        print("3-Buscar Producto")
-        print("4-Eliminar Producto")
-        print("5-Modificar datos de Producto")
-        print("6-Salir")
+        print("1 - Ingresar un nuevo Producto")
+        print("2 - Listar registro de Productos")
+        print("3 - Buscar Producto")
+        print("4 - Eliminar Producto")
+        print("5 - Modificar datos de Producto")
+        print("6 - Salir")
         print("".center(30, "="))
-        opcion = int(input("Ingrese una opcion: "))
+
+        try:
+            opcion = int(input("Ingrese una opcion: "))
+        except ValueError:
+            print("Por favor, ingrese un número válido.")
+            continue
 
         if opcion == 1:
             nombre = input('Ingrese el nombre: ')
@@ -34,7 +38,7 @@ def mostrar_menu():
         elif opcion == 5:
             modificar_producto()
         elif opcion == 6:
-            print("\n Hasta pronto...")
+            print("\nHasta pronto...")
             break
         else:
-            print("Opcion invalida\n")
+            print("Opción inválida\n")

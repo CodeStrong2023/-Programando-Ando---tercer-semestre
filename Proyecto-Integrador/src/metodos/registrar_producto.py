@@ -1,4 +1,4 @@
-from database.conexion import conectar_db
+from src.database.conexion import conectar_db
 
 # Método para registrar productos
 def registrar_producto(nombre, cantidad, precio_compra, precio_venta):

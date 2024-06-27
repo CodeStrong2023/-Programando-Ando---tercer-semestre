@@ -1,47 +1,41 @@
 from tabulate import tabulate
-from database.conexion import conectar_db
+from src.database.conexion import conectar_db
 
-# Método general de buscar producto (selección)
 def buscar_producto():
-    conexion = conectar_db()
-    cursor = conexion.cursor()
+    with conectar_db() as conexion:
+        with conexion.cursor() as cursor:
+            print("Buscar Producto".center(30, "="))
+            print("Buscar por:")
+            print("1. Id")
+            print("2. Nombre")
+            print("3. Salir/Cancelar")
 
-    print("Buscar Producto".center(30, "="))
-    print("Buscar por:")
-    print("1. Id")
-    print("2. Nombre")
-    print("3. Salir/Cancelar")
+            try:
+                buscar = int(input())
+            except ValueError:
+                print("Opción inválida\n")
+                return
 
-    try:
-        buscar = int(input())
-    except ValueError:
-        print("Opción inválida\n")
-        return
+            if buscar not in [1, 2, 3]:
+                print("Opción inválida\n")
+                return
 
-    if buscar not in [1, 2, 3]:
-        print("Opción inválida\n")
-        return
+            if buscar == 3:
+                print("\nOperación cancelada\n")
+                return
 
-    if buscar == 3:
-        print("\nOperación cancelada\n")
-        return
+            try:
+                if buscar == 1:
+                    buscar_por_id(cursor)
+                elif buscar == 2:
+                    buscar_por_nombre(cursor)
 
-    try:
-        if buscar == 1:
-            buscar_por_id(cursor)
-        elif buscar == 2:
-            buscar_por_nombre(cursor)
+            except Exception as e:
+                print(f"Error al buscar el producto: {e}")
 
-    except Exception as e:
-        print(f"Error al buscar el producto: {e}")
-    finally:
-        cursor.close
-        conexion.close
-
-# Método para buscar solo por ID
 def buscar_por_id(cursor):
     try:
-        headers = ["ID", "Nombre", "Cantidad", "Precio Compra", "Precio Venta"] # Para tabulates
+        headers = ["ID", "Nombre", "Cantidad", "Precio Compra", "Precio Venta"]
         sql = 'SELECT * FROM productos WHERE id=%s'
         id = input('Ingrese ID del producto: ')
 
@@ -55,7 +49,6 @@ def buscar_por_id(cursor):
     except Exception as e:
         print(f"Error al buscar el producto: {e}")
 
-# Método para buscar solo por Nombre
 def buscar_por_nombre(cursor):
     try:
         headers = ["ID", "Nombre", "Cantidad", "Precio Compra", "Precio Venta"]
