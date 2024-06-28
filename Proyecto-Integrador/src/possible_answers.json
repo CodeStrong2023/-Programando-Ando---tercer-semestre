@@ -1,0 +1,54 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": ["Hola", "Buenos dias", "Buenas tardes"],
+      "responses": ["¡Hola! ¿Cómo puedo ayudarte hoy?", "¡Hola!, soy Prograchat, el ChatBot del Ecommerce de programandoAndo"]
+    },
+    {
+      "tag": "despedida",
+      "patterns": ["Adiós", "Hasta luego", "Nos vemos"],
+      "responses": ["¡Adiós! Que tengas un buen día.", "¡Hasta luego! Vuelve pronto."]
+    },
+    {
+      "tag": "agradecimiento",
+      "patterns": ["Gracias", "Muchas gracias", "Te lo agradezco"],
+      "responses": ["¡De nada! ¿Hay algo más en lo que te pueda ayudar?", "¡Con gusto! ¿Necesitas algo más?"]
+    },
+    {
+      "tag": "información_envíos",
+      "patterns": ["¿Cómo hago un pedido?", "¿Cuál es el costo de envío?", "¿Cuánto tarda el envío?"],
+      "responses": ["Puedes hacer un pedido a través de nuestro sitio web. El costo de envío depende de tu ubicación y el tiempo de entrega es de 3 a 5 días hábiles."]
+    },
+    {
+      "tag": "información_pago",
+      "patterns": ["¿Cuáles son las opciones de pago?", "¿Aceptan tarjetas de crédito?", "¿Puedo pagar con PayPal?", "¿Cuales son los medios de pago?","¿Puedo pagar con MercadoPago?"],
+      "responses": ["Aceptamos tarjetas de crédito, débito y PayPal. También puedes pagar mediante transferencia bancaria."]
+    },
+    {
+      "tag": "devoluciones",
+      "patterns": ["¿Cómo puedo devolver un producto?", "¿Cuál es la política de devoluciones?", "¿Puedo hacer un cambio?"],
+      "responses": ["Puedes devolver un producto dentro de los 30 días posteriores a la compra. Para más detalles, visita nuestra página de política de devoluciones."]
+    },
+    {
+      "tag": "soporte_técnico",
+      "patterns": ["Tengo un problema con mi pedido", "Necesito ayuda con un producto", "Mi producto no funciona"],
+      "responses": ["Lamentamos escuchar eso. Por favor, proporciona más detalles a traves de nuestros contactos sobre el problema para que podamos ayudarte mejor."]
+    },
+    {
+      "tag": "horarios_atención",
+      "patterns": ["¿Cuáles son sus horarios de atención?", "¿A qué hora abren?", "¿Están abiertos los fines de semana?"],
+      "responses": ["Nuestros horarios de atención son de lunes a viernes de 9 AM a 6 PM. Estamos cerrados los fines de semana."]
+    },
+    {
+      "tag": "productos_disponibles",
+      "patterns": ["¿Tienen [producto] en stock?", "¿Puedo comprar [producto]?", "¿Tienen disponibles [producto]?"],
+      "responses": ["Para consultar la disponibilidad de productos, por favor visita nuestra página de productos en el sitio web."]
+    },
+    {
+      "tag": "contacto",
+      "patterns": ["¿Cómo puedo contactarlos?", "¿Cuál es su número de teléfono?", "¿Tienen correo electrónico?"],
+      "responses": ["Puedes contactarnos al número 123-456-7890 o enviar un correo a contacto@programandoando.com."]
+    }
+  ]
+}

@@ -1,3 +1,7 @@
+import os
+import subprocess
+import webbrowser
+
 from src.metodos.registrar_producto import registrar_producto
 from src.metodos.listar_producto import listar_productos
 from src.metodos.buscar_producto import buscar_producto
@@ -13,7 +17,8 @@ def mostrar_menu():
         print("3 - Buscar Producto")
         print("4 - Eliminar Producto")
         print("5 - Modificar datos de Producto")
-        print("6 - Salir")
+        print("6 - Preguntas frecuentes")
+        print("7 - Salir")
         print("".center(30, "="))
 
         try:
@@ -38,6 +43,13 @@ def mostrar_menu():
         elif opcion == 5:
             modificar_producto()
         elif opcion == 6:
+            print("Abriendo la aplicación Streamlit...")
+
+            streamlit_file = "src/ChatbotFront.py"
+            if os.path.exists(streamlit_file):
+                subprocess.run(["streamlit", "run", streamlit_file])
+            continue
+        elif opcion == 7:
             print("\nHasta pronto...")
             break
         else:
