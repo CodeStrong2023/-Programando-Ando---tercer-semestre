@@ -1,4 +1,4 @@
-from database.conexion import conectar_db
+from src.database.conexion import conectar_db
 
 # Método general para modificar un producto
 def modificar_producto():
@@ -18,14 +18,14 @@ def obtener_datos_a_modificar():
         '3': 'precio_compra',
         '4': 'precio_venta'
     }
-    
+
     print("Campos disponibles para modificar:")
     print("1. Nombre")
     print("2. Cantidad")
     print("3. Precio de Compra")
     print("4. Precio de Venta")
     print("5. Salir/Cancelar")
-    
+
     # Se crea la lista vacia "campos a modificar"
     campos_a_modificar = []
     while True:
@@ -49,7 +49,7 @@ def actualizar_producto(cursor, conexion, id, campos_a_modificar):
     sentencia = ', '.join([f"{campo} = %s" for campo, _ in campos_a_modificar])
     sql = f"UPDATE productos SET {sentencia} WHERE id = %s"
     valores = [valor for _, valor in campos_a_modificar] + [id]
-    
+
     try:
         cursor.execute(sql, valores)
         conexion.commit()
