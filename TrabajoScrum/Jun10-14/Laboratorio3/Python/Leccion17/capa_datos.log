@@ -1,0 +1,47 @@
+04:31:57 AM:DEBUG [logger_base.py:13] Mensaje a nivel debug
+04:31:57 AM:INFO [logger_base.py:14] Mensaje a nivel info
+04:31:57 AM:WARNING [logger_base.py:15] Mensaje a nivel warning
+04:31:57 AM:ERROR [logger_base.py:16] Mensaje a nivel error
+04:31:57 AM:CRITICAL [logger_base.py:17] Mensaje a nivel critical
+04:32:06 AM:DEBUG [Persona.py:54] 
+            Id Persona: 1,
+            Nombre: Juan,
+            Apellido: Perez,
+            Email: jperez@mail.com
+        
+04:36:06 AM:DEBUG [Persona.py:54] 
+            Id Persona: 1,
+            Nombre: Juan,
+            Apellido: Perez,
+            Email: jperez@mail.com
+        
+04:36:06 AM:DEBUG [Persona.py:56] 
+            Id Persona: None,
+            Nombre: Jose,
+            Apellido: Rodrigez,
+            Email: jrodrigez@mail.com
+        
+04:37:50 AM:DEBUG [Persona.py:54] 
+            Id Persona: 1,
+            Nombre: Juan,
+            Apellido: Perez,
+            Email: jperez@mail.com
+        
+04:37:50 AM:DEBUG [Persona.py:56] 
+            Id Persona: None,
+            Nombre: Jose,
+            Apellido: Rodrigez,
+            Email: jrodrigez@mail.com
+        
+04:37:50 AM:DEBUG [Persona.py:58] 
+            Id Persona: 1,
+            Nombre: None,
+            Apellido: None,
+            Email: None
+        
+04:58:29 AM:DEBUG [conexion.py:23] Conexión Exitosa! <connection object at 0x000001A914BE19C0; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+05:00:17 AM:ERROR [conexion.py:26] Ocurrió un error! 'utf-8' codec can't decode byte 0xf3 in position 79: invalid continuation byte
+05:01:26 AM:DEBUG [conexion.py:23] Conexión Exitosa! <connection object at 0x0000029F32DD19C0; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+05:01:26 AM:ERROR [conexion.py:39] Ocurrió un error! 'NoneType' object has no attribute 'cursor'
+05:06:41 AM:DEBUG [conexion.py:23] Conexión Exitosa! <connection object at 0x0000022F3BDED9C0; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+05:06:42 AM:DEBUG [conexion.py:36] Se abrió correctamente el cursor: <cursor object at 0x0000022F3BB06260; closed: 0>
